@@ -65,7 +65,7 @@ public class Registro extends javax.swing.JInternalFrame {
                         .addComponent(lblElija_alumno)
                         .addGap(38, 38, 38)
                         .addComponent(cboAlumno, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(213, Short.MAX_VALUE))
+                .addContainerGap(112, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

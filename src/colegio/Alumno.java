@@ -18,8 +18,8 @@ public class Alumno {
     
     public void agregarMateria (Materia m) {
         if (materias.add(m))
-            System.out.println(" El alumno " + nombre + " se agrego a la materia " + m.getNombre());
-        else System.out.println(" El alumno ya esta incripto en la materia " + m.getNombre());        
+            System.out.println(" El alumno " + Apellido + " se agrego a la materia " + m.getNombre());
+        else System.out.println(" El alumno " + Apellido + " ya esta incripto en la materia " + m.getNombre());        
         
     }
      public int cantidadMaterias (){

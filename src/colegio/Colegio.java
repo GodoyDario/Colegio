@@ -28,7 +28,12 @@ public class Colegio {
          alumno.agregarMateria(materia);
          alumno.agregarMateria(materia2);
          alumno.agregarMateria(materia3);
-         alumno.agregarMateria(materia3);
+         
+         alumno2.agregarMateria(materia);
+         alumno2.agregarMateria(materia2);
+         alumno2.agregarMateria(materia3);
+         alumno2.agregarMateria(materia3);
+         
          System.out.println(materia);
          
         //alumno.agregarMateria(Ingles 1);
