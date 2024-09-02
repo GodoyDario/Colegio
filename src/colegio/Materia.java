@@ -37,6 +37,11 @@ public class Materia {
         this.Anio = Anio;
     }
 
+    @Override
+    public String toString() {
+        return "Materia{" + "idMateria=" + idMateria + ", Nombre=" + Nombre + ", Anio=" + Anio + '}';
+    }
+
           
         }
             
