@@ -36,10 +36,8 @@ public class Colegio {
          
          System.out.println(materia);
          
-        //alumno.agregarMateria(Ingles 1);
-         
-         alumno.mostrarInfo();
-         alumno2.mostrarInfo();
+         System.out.println(alumno.getApellido()+ " esta inscripto en: " + alumno.cantidadMaterias() + " materias.");
+         System.out.println(alumno2.getApellido()+ " esta inscripto en: " + alumno2.cantidadMaterias() + " materias.");
          
     }
     
