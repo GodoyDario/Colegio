@@ -1,8 +1,12 @@
 
 package colegio;
 
+import vistas.Sistema;
+import colegio.Alumno;
+import colegio.Materia;
 import java.util.HashSet;
 import java.util.Set;
+import javax.swing.SwingUtilities;
 
 /**
  *
@@ -39,6 +43,14 @@ public class Colegio {
          System.out.println(alumno.getApellido()+ " esta inscripto en: " + alumno.cantidadMaterias() + " materias.");
          System.out.println(alumno2.getApellido()+ " esta inscripto en: " + alumno2.cantidadMaterias() + " materias.");
          
+         iniciarInterfaz();
+    }
+            public static void iniciarInterfaz (){
+            SwingUtilities.invokeLater (()-> {
+                Sistema colegio = new Sistema();
+                colegio.setVisible(true);
+            }) ;
+       
     }
     
 }

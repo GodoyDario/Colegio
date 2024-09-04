@@ -1,12 +1,12 @@
-package vistas.newpackage;
+package vistas;
 
 /**
  *
  * @author Xethias
  */
-public class Colegio extends javax.swing.JFrame {
+public class Sistema extends javax.swing.JFrame {
 
-    public Colegio() {
+    public Sistema() {
         initComponents();
         this.setTitle("Escritorio");
     }
@@ -134,20 +134,21 @@ public class Colegio extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Colegio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Sistema.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Colegio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Sistema.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Colegio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Sistema.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Colegio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Sistema.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Colegio().setVisible(true);
+                new Sistema().setVisible(true);
             }
         });
     }
@@ -165,4 +166,6 @@ public class Colegio extends javax.swing.JFrame {
     private javax.swing.JMenu menuitemRegistro;
     private javax.swing.JMenuItem menuitemregis;
     // End of variables declaration//GEN-END:variables
+
+    
 }
