@@ -81,6 +81,11 @@ public class Sistema extends javax.swing.JFrame {
         Jmenu.add(menuitemRegistro);
 
         jMenu_Salir.setText("Salir");
+        jMenu_Salir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenu_SalirActionPerformed(evt);
+            }
+        });
         Jmenu.add(jMenu_Salir);
 
         setJMenuBar(Jmenu);
@@ -116,6 +121,11 @@ public class Sistema extends javax.swing.JFrame {
         dplEscritorio.add(registro);
         registro.setVisible(true);
     }//GEN-LAST:event_menuitemregisActionPerformed
+
+    private void jMenu_SalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu_SalirActionPerformed
+        
+        jMenu_Salir.addActionListener(e -> System.exit(0));
+    }//GEN-LAST:event_jMenu_SalirActionPerformed
 
     /**
      * @param args the command line arguments
