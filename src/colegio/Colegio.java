@@ -2,8 +2,6 @@
 package colegio;
 
 import vistas.Sistema;
-import colegio.Alumno;
-import colegio.Materia;
 import java.util.HashSet;
 import java.util.Set;
 import javax.swing.SwingUtilities;

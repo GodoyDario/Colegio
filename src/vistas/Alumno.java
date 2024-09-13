@@ -4,17 +4,21 @@
  */
 package vistas;
 
+import java.util.HashSet;
+import javax.swing.JOptionPane;
+import colegio.Colegio;
 /**
  *
  * @author Xethias
  */
 public class Alumno extends javax.swing.JInternalFrame {
-
+    private HashSet <Alumno> alum;
     /**
      * Creates new form Alumno
      */
     public Alumno() {
         initComponents();
+        this.alum=alum;
     }
 
     /**
@@ -33,9 +37,9 @@ public class Alumno extends javax.swing.JInternalFrame {
         txtNombre = new javax.swing.JTextField();
         txtLegajo = new javax.swing.JTextField();
         txtApellido = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        jB_guardar = new javax.swing.JButton();
+        jB_nuevo = new javax.swing.JButton();
+        jB_sallir = new javax.swing.JButton();
 
         setClosable(true);
         setIconifiable(true);
@@ -58,36 +62,24 @@ public class Alumno extends javax.swing.JInternalFrame {
         lblForm_alumnos.setForeground(new java.awt.Color(51, 153, 255));
         lblForm_alumnos.setText("Formulario de Alumnos");
 
-        txtNombre.addActionListener(new java.awt.event.ActionListener() {
+        jB_guardar.setText("Guardar");
+        jB_guardar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtNombreActionPerformed(evt);
+                jB_guardarActionPerformed(evt);
             }
         });
 
-        txtLegajo.addActionListener(new java.awt.event.ActionListener() {
+        jB_nuevo.setText("Nuevo");
+        jB_nuevo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtLegajoActionPerformed(evt);
+                jB_nuevoActionPerformed(evt);
             }
         });
 
-        jButton1.setText("Guardar");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        jB_sallir.setText("Salir");
+        jB_sallir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-
-        jButton2.setText("Nuevo");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-
-        jButton3.setText("Salir");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                jB_sallirActionPerformed(evt);
             }
         });
 
@@ -116,11 +108,11 @@ public class Alumno extends javax.swing.JInternalFrame {
                 .addContainerGap(119, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jButton1)
+                .addComponent(jB_guardar)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton2)
+                .addComponent(jB_nuevo)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton3)
+                .addComponent(jB_sallir)
                 .addGap(22, 22, 22))
         );
         layout.setVerticalGroup(
@@ -142,40 +134,46 @@ public class Alumno extends javax.swing.JInternalFrame {
                     .addComponent(lblNombre))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2)
-                    .addComponent(jButton3))
+                    .addComponent(jB_guardar)
+                    .addComponent(jB_nuevo)
+                    .addComponent(jB_sallir))
                 .addGap(18, 18, 18))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtLegajoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtLegajoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtLegajoActionPerformed
+    private void jB_nuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB_nuevoActionPerformed
+        txtLegajo.setText("");
+        txtNombre.setText("");
+        txtApellido.setText("");
+    }//GEN-LAST:event_jB_nuevoActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    private void jB_guardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB_guardarActionPerformed
+        int legajo = Integer.parseInt(txtLegajo.getText());
+        String nombre = txtNombre.getText();
+        String apellido = txtApellido.getText();
+        boolean x = true;
+        
+        Alumno alu = new Alumno();
+        if (x == true){
+            if (alum.add(alu)){
+                JOptionPane.showMessageDialog(this, "El alumno " + alu + " se cargo correctamente.");
+            }else{       
+                JOptionPane.showMessageDialog(this, "El alumno" + alu + "ya se encuentra ingresado.");
+        } 
+    }   
+    }//GEN-LAST:event_jB_guardarActionPerformed
 
-    private void txtNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombreActionPerformed
+    private void jB_sallirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB_sallirActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtNombreActionPerformed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_jB_sallirActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jB_guardar;
+    private javax.swing.JButton jB_nuevo;
+    private javax.swing.JButton jB_sallir;
     private javax.swing.JLabel lblApellido;
     private javax.swing.JLabel lblForm_alumnos;
     private javax.swing.JLabel lblLegajo;

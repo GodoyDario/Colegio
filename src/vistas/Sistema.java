@@ -124,7 +124,7 @@ public class Sistema extends javax.swing.JFrame {
 
     private void jMenu_SalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu_SalirActionPerformed
         
-        jMenu_Salir.addActionListener(e -> System.exit(0));
+        System.exit(0);
     }//GEN-LAST:event_jMenu_SalirActionPerformed
 
     /**
