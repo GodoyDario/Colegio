@@ -1,11 +1,15 @@
 package vistas;
 
+import java.util.HashSet;
+
 /**
  *
  * @author Xethias
  */
 public class Sistema extends javax.swing.JFrame {
-
+    public static HashSet <Alumno> alumnos = new HashSet<>();
+    public static HashSet <Materia> materias = new HashSet<>();
+    
     public Sistema() {
         initComponents();
         this.setTitle("Escritorio");
