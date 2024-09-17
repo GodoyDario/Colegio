@@ -111,17 +111,21 @@ public class VistaPrincipal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jMenuItemAgregarAlumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemAgregarAlumnoActionPerformed
-        // TODO add your handling code here:
+       jDesktopPaneEscritorio.removeAll();
+       jDesktopPaneEscritorio.repaint();
         FormularioAlumnos frame = new FormularioAlumnos();
         jDesktopPaneEscritorio.add(frame);
         frame.setVisible(true);
+        jDesktopPaneEscritorio.moveToFront(this);
     }//GEN-LAST:event_jMenuItemAgregarAlumnoActionPerformed
 
     private void jMenuItemAgregarMateriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemAgregarMateriaActionPerformed
-        // TODO add your handling code here:
+       jDesktopPaneEscritorio.removeAll();
+       jDesktopPaneEscritorio.repaint();
         FormularioMaterias frame = new FormularioMaterias();
         jDesktopPaneEscritorio.add(frame);
         frame.setVisible(true);
+        jDesktopPaneEscritorio.moveToFront(this);
     }//GEN-LAST:event_jMenuItemAgregarMateriaActionPerformed
 
     private void jMenuSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuSalirActionPerformed
@@ -130,10 +134,12 @@ public class VistaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuSalirActionPerformed
 
     private void jMenuItemRegistrarseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemRegistrarseActionPerformed
-        // TODO add your handling code here:
+        jDesktopPaneEscritorio.removeAll();
+       jDesktopPaneEscritorio.repaint();
         FormularioInscripcion frame = new FormularioInscripcion();
         jDesktopPaneEscritorio.add(frame);
         frame.setVisible(true);
+        jDesktopPaneEscritorio.moveToFront(this);
     }//GEN-LAST:event_jMenuItemRegistrarseActionPerformed
 
     /**
