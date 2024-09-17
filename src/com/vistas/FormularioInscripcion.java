@@ -9,6 +9,7 @@ import com.colegio.Alumno;
 import com.colegio.Materia;
 import static com.vistas.VistaPrincipal.alumnosSet;
 import static com.vistas.VistaPrincipal.materiasSet;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -47,6 +48,11 @@ public class FormularioInscripcion extends javax.swing.JInternalFrame {
         jButtonInscribir.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jButtonInscribir.setText("Inscribir");
         jButtonInscribir.setPreferredSize(new java.awt.Dimension(120, 100));
+        jButtonInscribir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonInscribirActionPerformed(evt);
+            }
+        });
         jPanelSouth.add(jButtonInscribir);
 
         jButtonSalir.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
@@ -82,6 +88,11 @@ public class FormularioInscripcion extends javax.swing.JInternalFrame {
 
         jComboBoxAlumno.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jComboBoxAlumno.setPreferredSize(new java.awt.Dimension(141, 65));
+        jComboBoxAlumno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBoxAlumnoActionPerformed(evt);
+            }
+        });
         jPanelCenter.add(jComboBoxAlumno, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 180, 290, -1));
 
         getContentPane().add(jPanelCenter, java.awt.BorderLayout.CENTER);
@@ -90,7 +101,7 @@ public class FormularioInscripcion extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jComboBoxMateriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxMateriaActionPerformed
-        // TODO add your handling code here:
+       
     }//GEN-LAST:event_jComboBoxMateriaActionPerformed
 
     private void jButtonSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSalirActionPerformed
@@ -98,14 +109,25 @@ public class FormularioInscripcion extends javax.swing.JInternalFrame {
         this.dispose();
     }//GEN-LAST:event_jButtonSalirActionPerformed
 
+    private void jButtonInscribirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonInscribirActionPerformed
+        
+       String materia = (String) jComboBoxMateria.getSelectedItem();
+       String alumno = (String) jComboBoxAlumno.getSelectedItem();
+JOptionPane.showMessageDialog(this, "El alumno: "+alumno + " Se incribio a la materia " + materia);
+    }//GEN-LAST:event_jButtonInscribirActionPerformed
+
+    private void jComboBoxAlumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxAlumnoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBoxAlumnoActionPerformed
+
     public void llenarMater(){
         for (Materia mater : materiasSet) {
-            jComboBoxMateria.addItem(mater.getNombre());
+            jComboBoxMateria.addItem(mater.getNombre() + " " + mater.getAnio() );
         }
     }
     public void llenarAlumn(){
         for (Alumno alumn : alumnosSet) {
-            jComboBoxAlumno.addItem(alumn.getNombre());
+            jComboBoxAlumno.addItem(alumn.getNombre() + " " + alumn.getApellido());
         }
     }
    /*public void cargarAlumnos() {

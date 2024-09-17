@@ -130,7 +130,7 @@ public class FormularioMaterias extends javax.swing.JInternalFrame {
         String materiaNombre = jTextFieldNombreMateria.getText();
         int anio = Integer.parseInt(jTextFieldAnio.getText());
         
-        Materia materia = new Materia(idMateria, title, anio);
+        Materia materia = new Materia(idMateria, materiaNombre, anio);
         VistaPrincipal.materiasSet.add(materia);
         JOptionPane.showMessageDialog(null, "Materia guardada exitosamente.");
         

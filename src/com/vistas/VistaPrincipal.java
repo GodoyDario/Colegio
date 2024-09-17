@@ -45,6 +45,7 @@ public class VistaPrincipal extends javax.swing.JFrame {
         jMenuRegistro = new javax.swing.JMenu();
         jMenuItemRegistrarse = new javax.swing.JMenuItem();
         jMenuSalir = new javax.swing.JMenu();
+        jmiSalir = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -103,6 +104,15 @@ public class VistaPrincipal extends javax.swing.JFrame {
                 jMenuSalirActionPerformed(evt);
             }
         });
+
+        jmiSalir.setText("Salir");
+        jmiSalir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmiSalirActionPerformed(evt);
+            }
+        });
+        jMenuSalir.add(jmiSalir);
+
         jMenuBar1.add(jMenuSalir);
 
         setJMenuBar(jMenuBar1);
@@ -141,6 +151,10 @@ public class VistaPrincipal extends javax.swing.JFrame {
         frame.setVisible(true);
         jDesktopPaneEscritorio.moveToFront(this);
     }//GEN-LAST:event_jMenuItemRegistrarseActionPerformed
+
+    private void jmiSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiSalirActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_jmiSalirActionPerformed
 
     /**
      * @param args the command line arguments
@@ -194,5 +208,6 @@ public class VistaPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenu jMenuMateria;
     private javax.swing.JMenu jMenuRegistro;
     private javax.swing.JMenu jMenuSalir;
+    private javax.swing.JMenuItem jmiSalir;
     // End of variables declaration//GEN-END:variables
 }
