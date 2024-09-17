@@ -7,6 +7,8 @@ package com.vistas;
 
 import com.colegio.Alumno;
 import com.colegio.Materia;
+import static com.vistas.VistaPrincipal.alumnosSet;
+import static com.vistas.VistaPrincipal.materiasSet;
 
 /**
  *
@@ -20,8 +22,8 @@ public class FormularioInscripcion extends javax.swing.JInternalFrame {
     public FormularioInscripcion() {
         initComponents();
         setSize(800, 600);
-        cargarMaterias();
-        cargarAlumnos();
+        llenarMater();
+        llenarAlumn();
     }
 
     /**
@@ -96,7 +98,17 @@ public class FormularioInscripcion extends javax.swing.JInternalFrame {
         this.dispose();
     }//GEN-LAST:event_jButtonSalirActionPerformed
 
-    public void cargarAlumnos() {
+    public void llenarMater(){
+        for (Materia mater : materiasSet) {
+            jComboBoxMateria.addItem(mater.getNombre());
+        }
+    }
+    public void llenarAlumn(){
+        for (Alumno alumn : alumnosSet) {
+            jComboBoxAlumno.addItem(alumn.getNombre());
+        }
+    }
+   /*public void cargarAlumnos() {
         VistaPrincipal.alumnosSet.forEach((alumno) -> {
             jComboBoxAlumno.addItem(alumno.getNombre() +" "+ alumno.getApellido());
         });
@@ -104,9 +116,9 @@ public class FormularioInscripcion extends javax.swing.JInternalFrame {
     
     public void cargarMaterias() {
         VistaPrincipal.materiasSet.forEach((materia) -> {
-            jComboBoxMateria.addItem(materia.getNombre() +" "+ materia.getIdMateria());
+            jComboBoxMateria.addItem(materia.getNombre() +" "+ materia.getNombre());
         });
-    }
+    }*/
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonInscribir;
     private javax.swing.JButton jButtonSalir;
